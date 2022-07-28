@@ -3,7 +3,7 @@
 let visitpost = confirm("Do you want to visit institute eml site")
 if (visitpost) {
     alert("Thank You");
-}
+} 
 else {
     alert("See you next time");
 }
