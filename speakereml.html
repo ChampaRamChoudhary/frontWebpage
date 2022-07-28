@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>speaker of eml</title>
+
+    <!-- Bootstrap Get Started -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="../Bootstrap/css/eml.css">
+
+    <!-- JS script -->
+    <script src="../Bootstrap/js/eml.js"></script>
+
+    <!-- Google Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:wght@100&family=Montserrat:wght@100;900&family=Ubuntu:wght@500&display=swap');
+    </style>
+
+    <!-- Font Awesome Get Started -->
+    <script src="https://kit.fontawesome.com/ee0eabc23c.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+    <section id="title">
+        <div class="container-fluid">
+
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <a class="navbar-brand" href="#">EML</a>
+                <span id="time"></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="./speakereml.html">Speakers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./abouteml.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./teameml.html">Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./contacteml.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="button d-flex ms-auto">
+                    <button data-bs-toggle="modal" data-bs-target="#login" class=" btn btn-outline-info">Login</button>
+                    <button data-bs-toggle="modal" data-bs-target="#signup" class=" btn btn-sm btn-dark mx-2">Sign
+                        Up</button>
+                </div>
+            </nav>
+
+
+
+            <div class=" row">
+                <div class="col-lg-6">
+                    <h1>Welcome To The EML (Extra Mural Lectures) At IIT Madras</h1>
+                    <button class="btn btn-lg btn-dark btn-dowload"><i class="fa-brands fa-windows"></i>
+                        Download</button>
+                    <button class="btn btn-lg btn-outline-light btn-dowload"><i class="fa-brands fa-google-play"></i>
+                        Download</button>
+
+                </div>
+                <div class="col-lg-6">
+                    <img class="title-img" src="../Bootstrap/photos/eml logo.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Login Into Your Account</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-block btn-primary">Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Sign Up -->
+  <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Create Your Account</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">First name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="username" class="form-label">Email Address</label>
+              <div class="input-group has-validation">
+                <input type="email" class="form-control" id="username" placeholder="E-mail" required="">
+                <div class="invalid-feedback">
+                  Please enter a valid email address.
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="username" class="form-label">Password</label>
+              <div class="input-group has-validation">
+                <input type="email" class="form-control" id="username" placeholder="Password" required="">
+                <div class="invalid-feedback">
+                  Please enter a valid Password.
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="username" class="form-label">Confirm Password</label>
+              <div class="input-group has-validation">
+                <input type="email" class="form-control" id="username" placeholder="Re-enter the Password" required="">
+                <div class="invalid-feedback">
+                  Please enter a same Password.
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="address" class="form-label">Address</label>
+              <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
+            </div>
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">Country</label>
+              <select class="form-select" id="country" required="">
+                <option value="">India</option>
+                <option>United States</option>
+                <option>England</option>
+                <option>China</option>
+                <option>Russian</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label for="zip" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="zip" placeholder="" required="">
+              <div class="invalid-feedback">
+                Zip code required.
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-block btn-primary my-1">Sign Up</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <main class="container my-2">
+        <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
+            <div class="col-md-6 px-0">
+                <h1 class="display-4 fst-italic">EML's all Speakers</h1>
+                <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and
+                    efficiently about what’s most interesting in this post’s contents.</p>
+                <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">World</strong>
+                        <h3 class="mb-0">Ganesh Vasudev Mavalankar</h3>
+                        <div class="mb-1 text-muted">Nov 12</div>
+                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural
+                            lead-in to additional content.</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="https://source.unsplash.com/200x300/?young,man,person" alt="Reload">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Design</strong>
+                        <h3 class="mb-0">M. A. Ayyangar</h3>
+                        <div class="mb-1 text-muted">Nov 11</div>
+                        <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                            additional content.</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="https://source.unsplash.com/200x300/?youg,boy,person" alt="Reload">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Design</strong>
+                        <h3 class="mb-0">Hukam Singh</h3>
+                        <div class="mb-1 text-muted">Nov 11</div>
+                        <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                            additional content.</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="https://source.unsplash.com/200x300/?boy,man,person,young" alt="Reload">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Design</strong>
+                        <h3 class="mb-0">Neelam Sanjiva Reddy</h3>
+                        <div class="mb-1 text-muted">Nov 11</div>
+                        <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                            additional content.</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="https://source.unsplash.com/200x300/?person,boy" alt="Reload">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Design</strong>
+                        <h3 class="mb-0">Gurdial Singh Dhillon</h3>
+                        <div class="mb-1 text-muted">Nov 11</div>
+                        <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                            additional content.</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="https://source.unsplash.com/200x300/?boy,man" alt="Reload">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Design</strong>
+                        <h3 class="mb-0">Bali Ram Bhagat</h3>
+                        <div class="mb-1 text-muted">Nov 11</div>
+                        <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                            additional content.</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="https://source.unsplash.com/200x300/?young,man" alt="Reload">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Design</strong>
+                        <h3 class="mb-0">Neelam Sanjiva Reddy</h3>
+                        <div class="mb-1 text-muted">Nov 11</div>
+                        <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                            additional content.</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="https://source.unsplash.com/200x300/?man,person" alt="Reload">
+                    </div>
+                </div>
+            </div>
+            <div class=" col-md-6">
+                        <div
+                            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <strong class="d-inline-block mb-2 text-success">Design</strong>
+                                <h3 class="mb-0">K. S. Hegde</h3>
+                                <div class="mb-1 text-muted">Nov 11</div>
+                                <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in
+                                    to
+                                    additional content.</p>
+                                <a href="#" class="stretched-link">Continue reading</a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <img src="https://source.unsplash.com/200x300/?young,boy" alt="Reload">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div
+                            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <strong class="d-inline-block mb-2 text-success">Design</strong>
+                                <h3 class="mb-0">Balram Jakhar</h3>
+                                <div class="mb-1 text-muted">Nov 11</div>
+                                <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in
+                                    to
+                                    additional content.</p>
+                                <a href="#" class="stretched-link">Continue reading</a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <img src="https://source.unsplash.com/200x300/?young" alt="Reload">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div
+                            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <strong class="d-inline-block mb-2 text-success">Design</strong>
+                                <h3 class="mb-0">Rabi Ray</h3>
+                                <div class="mb-1 text-muted">Nov 11</div>
+                                <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in
+                                    to
+                                    additional content.</p>
+                                <a href="#" class="stretched-link">Continue reading</a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block"><img
+                                    src="https://source.unsplash.com/200x300/?person" alt="Reload">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div
+                            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <strong class="d-inline-block mb-2 text-success">Design</strong>
+                                <h3 class="mb-0">Shivraj Patil</h3>
+                                <div class="mb-1 text-muted">Nov 11</div>
+                                <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in
+                                    to
+                                    additional content.</p>
+                                <a href="#" class="stretched-link">Continue reading</a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <img src="https://source.unsplash.com/200x300/?boy" alt="Reload">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div
+                            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <strong class="d-inline-block mb-2 text-success">Design</strong>
+                                <h3 class="mb-0">P. A. Sangma</h3>
+                                <div class="mb-1 text-muted">Nov 11</div>
+                                <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in
+                                    to
+                                    additional content.</p>
+                                <a href="#" class="stretched-link">Continue reading</a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                            <img src="https://source.unsplash.com/200x300/?oldman" alt="">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div
+                            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <strong class="d-inline-block mb-2 text-success">Design</strong>
+                                <h3 class="mb-0">G. M. C. Balayogi</h3>
+                                <div class="mb-1 text-muted">Nov 11</div>
+                                <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in
+                                    to
+                                    additional content.</p>
+                                <a href="#" class="stretched-link">Continue reading</a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <img src="https://source.unsplash.com/200x300/?whiteman" alt="">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div
+                            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <strong class="d-inline-block mb-2 text-success">Design</strong>
+                                <h3 class="mb-0">Manohar Joshi</h3>
+                                <div class="mb-1 text-muted">Nov 11</div>
+                                <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in
+                                    to
+                                    additional content.</p>
+                                <a href="#" class="stretched-link">Continue reading</a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <img src="https://source.unsplash.com/200x300/?man" alt="Reload">
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    </main>
+
+
+    <section id="footer">
+        <a target="_blank" href="www.facebook.com"> <i class="fa-brands fa-facebook fa-2x"></i></a>
+        <a target="_blank" href="www.instagram.com"> <i class="fa-brands fa-instagram fa-2x"></i></a>
+        <a target="_blank" href="www.twitter.com"> <i class="fa-brands fa-twitter fa-2x"></i></a>
+        <a target="_blank" href="www.gmail.com"><i class="fa-solid fa-envelope fa-2x"></i></a>
+        <a target="_blank" href="www.whatsappweb.com"> <i class="fa-brands fa-whatsapp fa-2x"></i></a>
+        <h5><i class="fa-solid fa-copyright"></i> Copyright 2022 eml-iitm.org</h5>
+    </section>
+
+</body>
+<!-- Bootstrap Script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</html>

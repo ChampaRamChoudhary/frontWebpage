@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMl Tam Member</title>
+
+  <!-- Bootstrap Get Started -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+  <!-- CSS stylesheet -->
+  <link rel="stylesheet" href="../Bootstrap/css/eml.css">
+
+  <!-- JS script -->
+  <script src="../Bootstrap/js/eml.js"></script>
+
+  <!-- Google Fonts -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Jost:wght@100&family=Montserrat:wght@100;900&family=Ubuntu:wght@500&display=swap');
+  </style>
+
+  <!-- Font Awesome Get Started -->
+  <script src="https://kit.fontawesome.com/ee0eabc23c.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <section id="title">
+    <div class="container-fluid">
+
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <a class="navbar-brand" href="#">EML</a>
+        <span id="time"></span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="./speakereml.html">Speakers</a></li>
+            <li class="nav-item"><a class="nav-link" href="./abouteml.html">About</a></li>
+            <li class="nav-item"><a class="nav-link active" href="./teameml.html">Team</a></li>
+            <li class="nav-item"><a class="nav-link" href="./contacteml.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="button d-flex ms-auto">
+          <button data-bs-toggle="modal" data-bs-target="#login" class=" btn btn-outline-info">Login</button>
+          <button data-bs-toggle="modal" data-bs-target="#signup" class=" btn btn-sm btn-dark mx-2">Sign
+            Up</button>
+        </div>
+      </nav>
+
+
+
+      <div class=" row">
+        <div class="col-lg-6">
+          <h1>Welcome To The EML (Extra Mural Lectures) At IIT Madras</h1>
+          <button class="btn btn-lg btn-dark btn-dowload"><i class="fa-brands fa-windows"></i>
+            Download</button>
+          <button class="btn btn-lg btn-outline-light btn-dowload"><i class="fa-brands fa-google-play"></i>
+            Download</button>
+
+        </div>
+        <div class="col-lg-6">
+          <img class="title-img" src="../Bootstrap/photos/eml logo.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Login Into Your Account</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-block btn-primary">Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Sign Up -->
+  <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Create Your Account</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">First name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="username" class="form-label">Email Address</label>
+              <div class="input-group has-validation">
+                <input type="email" class="form-control" id="username" placeholder="E-mail" required="">
+                <div class="invalid-feedback">
+                  Please enter a valid email address.
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="username" class="form-label">Password</label>
+              <div class="input-group has-validation">
+                <input type="email" class="form-control" id="username" placeholder="Password" required="">
+                <div class="invalid-feedback">
+                  Please enter a valid Password.
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="username" class="form-label">Confirm Password</label>
+              <div class="input-group has-validation">
+                <input type="email" class="form-control" id="username" placeholder="Re-enter the Password" required="">
+                <div class="invalid-feedback">
+                  Please enter a same Password.
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="address" class="form-label">Address</label>
+              <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
+            </div>
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">Country</label>
+              <select class="form-select" id="country" required="">
+                <option value="">India</option>
+                <option>United States</option>
+                <option>England</option>
+                <option>China</option>
+                <option>Russian</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label for="zip" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="zip" placeholder="" required="">
+              <div class="invalid-feedback">
+                Zip code required.
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-block btn-primary my-1">Sign Up</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row m-3">
+
+    <div class="col-lg-4">
+      <img  class="rounded-circle" src="https://source.unsplash.com/200x200/?leader" alt="">
+
+      <h2 class="fw-normal">Mr. Jai Narayan</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nam earum et officiis, labore maxime ipsa asperiores provident. Et, asperiores excepturi ab officiis non architecto magni atque numquam soluta ea aperiam. Nam magni, soluta fugit voluptatum odit repudiandae porro atque voluptas amet.</p>
+      <p><a class="btn btn-secondary" href="#">Share</a></p>
+    </div>
+    <div class="col-lg-4">
+      <img class="rounded-circle" src="https://source.unsplash.com/200x200/?manager" alt="">
+
+      <h2 class="fw-normal">Mr. Champa Ram</h2>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad nesciunt tempora deleniti quod voluptates hic ipsum, unde assumenda commodi maiores alias maxime doloremque, officiis cupiditate nulla praesentium qui accusantium, accusamus blanditiis molestias voluptatum. Harum ipsum voluptas soluta dolor obcaecati. Sed, velit dolore.</p>
+      <p><a class="btn btn-secondary" href="#">Share</a></p>
+    </div><div class="col-lg-4">
+      <img  class="rounded-circle" src="https://source.unsplash.com/200x200/?student" alt="">
+
+      <h2 class="fw-normal">Mr. K. Mahesh</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum nihil minus at. Rem dolores unde, expedita reiciendis veritatis voluptas est, necessitatibus rerum tempora repudiandae ab sint ullam blanditiis reprehenderit consequatur iusto quia. Atque expedita quidem ipsam optio doloremque illo error sequi quam!</p>
+      <p><a class="btn btn-secondary" href="#">Share</a></p>
+    </div>
+  </div>
+
+  <main>
+    <div class="container py-4">
+      <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+          <h1 class="display-5 fw-bold">EML Team Members</h1>
+          <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the
+            one in previous versions of Bootstrap. Check out the examples below for how you can remix and
+            restyle it to your liking.</p>
+          <button class="btn btn-primary btn-lg" type="button">Explore More</button>
+        </div>
+      </div>
+
+      <div class="row align-items-md-stretch">
+        <div class="col-md-6 my-1">
+          <div class="h-100 p-5 text-bg-dark rounded-3">
+            <h2>K. Mahesh</h2>
+            <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron
+              look. Then, mix and match with additional component themes and more.</p>
+            <button class="btn btn-outline-light" type="button">Explore More</button>
+          </div>
+        </div>
+        <div class="col-md-6 my-1">
+          <div class="h-100 p-5 bg-light border rounded-3">
+            <h2>Champa Ram</h2>
+            <p>Or, keep it light and add a border for some added definition to the boundaries of your
+              content. Be sure to look under the hood at the source HTML here as we've adjusted the
+              alignment and sizing of both column's content for equal-height.</p>
+            <button class="btn btn-outline-secondary" type="button">Explore More</button>
+          </div>
+        </div>
+        <div class="col-md-6 my-1">
+          <div class="h-100 p-5 bg-light border rounded-3">
+            <h2>Eshan Kulkarni</h2>
+            <p>Or, keep it light and add a border for some added definition to the boundaries of your
+              content. Be sure to look under the hood at the source HTML here as we've adjusted the
+              alignment and sizing of both column's content for equal-height.</p>
+            <button class="btn btn-outline-secondary" type="button">Explore More</button>
+          </div>
+        </div>
+        <div class="col-md-6 my-1">
+          <div class="h-100 p-5 text-bg-dark rounded-3">
+            <h2>Asha</h2>
+            <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron
+              look. Then, mix and match with additional component themes and more.</p>
+            <button class="btn btn-outline-light" type="button">Explore More</button>
+          </div>
+        </div>
+        <div class="col-md-6 my-1">
+          <div class="h-100 p-5 text-bg-dark rounded-3">
+            <h2>Arya Daoo</h2>
+            <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron
+              look. Then, mix and match with additional component themes and more.</p>
+            <button class="btn btn-outline-light" type="button">Explore More</button>
+          </div>
+        </div>
+        <div class="col-md-6 my-1">
+          <div class="h-100 p-5 bg-light border rounded-3">
+            <h2>Vishnu Vikas</h2>
+            <p>Or, keep it light and add a border for some added definition to the boundaries of your
+              content. Be sure to look under the hood at the source HTML here as we've adjusted the
+              alignment and sizing of both column's content for equal-height.</p>
+            <button class="btn btn-outline-secondary" type="button">Explore More</button>
+          </div>
+        </div>
+        <div class="col-md-6 my-1">
+          <div class="h-100 p-5 bg-light border rounded-3">
+            <h2>Praveen Kumar</h2>
+            <p>Or, keep it light and add a border for some added definition to the boundaries of your
+              content. Be sure to look under the hood at the source HTML here as we've adjusted the
+              alignment and sizing of both column's content for equal-height.</p>
+            <button class="btn btn-outline-secondary" type="button">Explore More</button>
+          </div>
+        </div>
+        <div class="col-md-6 my-1">
+          <div class="h-100 p-5 text-bg-dark rounded-3">
+            <h2>Aiswarya</h2>
+            <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron
+              look. Then, mix and match with additional component themes and more.</p>
+            <button class="btn btn-outline-light" type="button">Explore More</button>
+          </div>
+        </div>
+        <div class="col-md-6 my-1">
+          <div class="h-100 p-5 text-bg-dark rounded-3">
+            <h2>Deb</h2>
+            <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron
+              look. Then, mix and match with additional component themes and more.</p>
+            <button class="btn btn-outline-light" type="button">Explore More</button>
+          </div>
+        </div>
+        <div class="col-md-6 my-1">
+          <div class="h-100 p-5 bg-light border rounded-3">
+            <h2>Annie</h2>
+            <p>Or, keep it light and add a border for some added definition to the boundaries of your
+              content. Be sure to look under the hood at the source HTML here as we've adjusted the
+              alignment and sizing of both column's content for equal-height.</p>
+            <button class="btn btn-outline-secondary" type="button">Explore More</button>
+          </div>
+        </div>
+        <div class="col-md-6 my-1">
+          <div class="h-100 p-5 bg-light border rounded-3">
+            <h2>Yewanth</h2>
+            <p>Or, keep it light and add a border for some added definition to the boundaries of your
+              content. Be sure to look under the hood at the source HTML here as we've adjusted the
+              alignment and sizing of both column's content for equal-height.</p>
+            <button class="btn btn-outline-secondary" type="button">Explore More</button>
+          </div>
+        </div>
+        <div class="col-md-6 my-1">
+          <div class="h-100 p-5 text-bg-dark rounded-3">
+            <h2>Shreya</h2>
+            <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron
+              look. Then, mix and match with additional component themes and more.</p>
+            <button class="btn btn-outline-light" type="button">Explore More</button>
+          </div>
+        </div>
+        <div class="col-md-6 my-1">
+          <div class="h-100 p-5 text-bg-dark rounded-3">
+            <h2>Malavika V Nair</h2>
+            <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron
+              look. Then, mix and match with additional component themes and more.</p>
+            <button class="btn btn-outline-light" type="button">Explore More</button>
+          </div>
+        </div>
+        <div class="col-md-6 my-1">
+          <div class="h-100 p-5 bg-light border rounded-3">
+            <h2>Jai Narayan Suresh</h2>
+            <p>Or, keep it light and add a border for some added definition to the boundaries of your
+              content. Be sure to look under the hood at the source HTML here as we've adjusted the
+              alignment and sizing of both column's content for equal-height.</p>
+            <button class="btn btn-outline-secondary" type="button">Explore More</button>
+          </div>
+        </div>
+      </div>
+  </main>
+
+  <section id="footer">
+    <a target="_blank" href="www.facebook.com"> <i class="fa-brands fa-facebook fa-2x"></i></a>
+    <a target="_blank" href="www.instagram.com"> <i class="fa-brands fa-instagram fa-2x"></i></a>
+    <a target="_blank" href="www.twitter.com"> <i class="fa-brands fa-twitter fa-2x"></i></a>
+    <a target="_blank" href="www.gmail.com"><i class="fa-solid fa-envelope fa-2x"></i></a>
+    <a target="_blank" href="www.whatsappweb.com"> <i class="fa-brands fa-whatsapp fa-2x"></i></a>
+    <h5><i class="fa-solid fa-copyright"></i> Copyright 2022 eml-iitm.org</h5>
+  </section>
+
+</body>
+<!-- Bootstrap Script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+</html>
